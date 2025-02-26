@@ -1,0 +1,160 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #80deea);
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0%  { background: #1ae4ff; }
+    15% { background: #80deea; }
+    30% { background: #bef3fa; }
+    45% { background: #80deea; }
+    55% { background: #1ae4ff; }
+    70% { background: #80deea; }
+    80% { background: #bef3fa;}
+    90% { background: #80deea; }
+    100%{ background: #1ae4ff;}
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    height: 150px;
+    background-color: rgba(25, 118, 210, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(65, 35, 35, 0.2);
+}
+
+#map {
+    margin-top: 190px;
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 5px solid rgba(25, 118, 210, 0.8);
+}
+.search-bar {
+    text-align: center;
+    margin: 20px 0;
+}
+.search-input {
+    padding: 12px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 25px;
+    border: 2px solid rgba(25, 118, 210, 0.8);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #1976D2;
+    outline: none;
+}
+
+.business-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.business-item {
+    flex: 0 0 45%; /* Two items side by side */
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(31, 5, 78, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.business-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.business-item h3 {
+    margin: 0;
+    color: #1976D2;
+}
+
+.business-item p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.review-input {
+    margin-top: 10px;
+    padding: 8px;
+    width: calc(100% - 20px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.review-input:focus {
+    border-color: #1976D2;
+    outline: none;
+}
+
+button {
+    background-color: #1976D2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1565C0;
+}
+
+.reviews {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(25, 118, 210, 0.8);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .business-item {
+        flex: 0 0 90%; /* One item full width */
+    }
+
+    #map {
+        height: 60vh;
+    }
+
+    .search-input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .search-input {
+        width: 95%;
+    }
+}

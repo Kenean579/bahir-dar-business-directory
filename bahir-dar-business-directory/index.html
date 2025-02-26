@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahir Dar Local Business Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Bahir Dar Local Business Directory</h1>
+    <p>Discover and review local businesses in Bahir Dar city</p>
+</header>
+
+<!-- Static Map Image -->
+<img src="bahir_dar_map.jpg" id="map" />
+
+<div class="search-bar">
+    <input type="text" id="search-input" class="search-input" placeholder="Search for businesses..." onkeyup="filterBusinesses()">
+</div>
+
+<div class="business-list" id="business-list"></div>
+
+<footer>
+    <p>&copy; 2025 Bahir Dar Business Directory | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
